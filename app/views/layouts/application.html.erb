@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t('title') %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('favicon.png') %>
+  </head>
+
+  <body>
+    <% @current = params[:controller] + "#" + params[:action]%>
+    <% @valid = 
+    @current != "devise/sessions#new" && 
+    @current != "devise/sessions#create" &&
+    @current != "devise/registrations#new" && 
+    @current != "devise/passwords#new" %>
+    <% if @valid %>
+      <% @devise_page = true %>
+      <%= render "layouts/navbar" %>
+      <div class="container">
+      <% else %>
+        <% 2.times do |n| %>
+          <br>
+        <% end %>
+    <% end %>
+    <%= yield %>
+      <% if @devise_page %>
+        <%= render "layouts/content" %>
+      </div>
+      <br>
+    </body>
+    <% end %>
+</html>

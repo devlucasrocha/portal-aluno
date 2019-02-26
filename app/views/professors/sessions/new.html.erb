@@ -1,0 +1,47 @@
+<div class="container-fluid">
+  <div style="
+  margin: auto;
+  width: 50%;
+  box-shadow: 5px 10px 8px #888888;
+  border-radius: 5px;
+  background-color: #d2d2d2;
+  border-radius: 30px;
+  padding: 20px;" class="img-fluid">
+    <%= render 'buttonToClose' %>
+    <h2><%= t("devise_page.login") %></h2>
+    <% flash.each do |key, value| %>
+      <div class="flash <%= key %>"><%= value %></div>
+    <% end %>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <form>
+          <div class="form-group">
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"Email", :required => true %>
+            </div>
+          </div>
+
+          <div class="form-group">  
+            <div class="field">
+              <%= t('devise_page.password') %><br />
+              <%= f.password_field :password, autocomplete: "current-password", class:"form-control", placeholder:t('devise_page.password'), :required => true %>
+            </div>
+          </div>
+
+          <% if devise_mapping.rememberable? -%>
+            <div class="field">
+              <%= f.check_box :remember_me %>
+              <%= t('devise_page.remember_me') %>
+            </div>
+          <% end -%>
+
+          <div class="actions">
+            <p style="text-align: center;"><%= f.submit "Log in", class:"btn btn-danger" %></p>
+          </div>
+        <form>
+    <% end %>
+    <%= render "professors/shared/links" %>
+    
+    <%= render 'languageSelect' %>
+</div>

@@ -1,0 +1,72 @@
+"pt-BR":
+  abc: "Olá mundo!"
+  navbar_MSG: "Portal do Aluno"
+  navbar_login: "Entrar"
+  navbar_logout: "Sair"
+  title: "Portal do Aluno"
+  welcome:
+    welcome: "Olá, estudante/professor!"
+    desc: "Este é um site para cadastrar e checar notas escolares"
+    start: "Para começar, clique em um dos botões abaixo"
+    check: "Checar notas"
+    submit: "Cadastrar novas notas"
+  
+  grades:
+    grades: "Notas"
+    show: "Mostrar"
+    edit: "Editar"
+    destroy: "Apagar"
+    table:
+      name: "Nome"
+      average: "Média"
+    
+    new: "Nova nota"
+
+  select:
+    choose: "Escolha seu idioma"
+    portguese: "Português"
+    english: "Inglês"
+
+  show:
+    showh1: "Mostrando notas"
+    name: "Nome"
+    average: "Média"
+    edit: "Editar"
+    back: "Voltar"
+
+  edit:
+    edith1: "Editando nota"
+    name: "Nome"
+    show: "Mostrar"
+    back: "Voltar"
+    update: "Atualizar nota"
+  activerecord:
+    models:
+      grade:
+        one: "Nota"
+        other: "Notas"
+  new:
+    newh1: "Nova nota"
+    name: "Nome"
+    first_grade: "Primeira nota"
+    second_grade: "Segunda nota"
+    third_grade: "Terceira nota"
+    fourth_grade: "Quarta nota"
+    back: "Voltar"
+
+  js_close: "Você realmente deseja sair?"
+  devise_page:
+    login: "Logar como professor"
+    password: "Senha"
+    remember_me: "Lembre-se de mim"
+    sign_up: "Criar nova conta"
+    forgot_password: "Esqueceu sua senha?"
+    characters_minimum: "caracteres mínimos"
+    password_confirmation: "Confirmação da senha"
+    sign_up_confirm: "Criar conta"
+    password_instructions: "Enviar instruções para recuperar senha"
+  footer:
+    featured: "Em destaque"
+    title: "Novas formas para ensinar"
+    description: "5 novas formas de melhorar a eduação"
+    open: "Abrir"
